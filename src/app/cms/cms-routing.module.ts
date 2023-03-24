@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './components/layout/layout.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
+import { RoleGuard } from '../guards/role.guard';
 
 const routes: Routes = [
   {

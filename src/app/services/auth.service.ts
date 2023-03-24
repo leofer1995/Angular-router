@@ -33,7 +33,9 @@ export class AuthService {
   getProfile() {
     return this.http.get<User>(`${this.apiUrl}/profile`)
       .pipe(
-        tap(user => this.user.next(user)) //luego emito un nuevo valor en el observer que cree para que lso componentes subcritos mediante user$ puedan
+        tap((user) => console.log(user, 'userrrrrrrrr')),
+        tap(user => this.user.next(user)),
+        tap(data => sessionStorage.setItem('user', JSON.stringify(data))) //luego emito un nuevo valor en el observer que cree para que lso componentes subcritos mediante user$ puedan
         // acceder al nuevo valor emitido 
       )
   }

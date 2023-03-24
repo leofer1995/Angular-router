@@ -18,11 +18,14 @@ export class AppComponent implements OnInit{
     private filesService: FilesService,
     private authService: AuthService,
     private tokenService: TokenService,
-  ) {}
+  ) {
+  }
 
-  ngOnInit(): void {
+  ngOnInit() {
     const token = this.tokenService.getToken();
+    console.log('tokern', token)
     if(token) {
+      console.log('si')
       this.authService.getProfile()
         .subscribe();
     }
