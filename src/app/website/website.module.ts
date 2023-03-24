@@ -1,4 +1,3 @@
-import { QuicklinkModule } from 'ngx-quicklink';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -34,7 +33,6 @@ import { SharedModule } from '../shared/shared.module';
     WebsiteRoutingModule,
     SwiperModule,
     SharedModule,
-    QuicklinkModule,
   ]
 })
 export class WebsiteModule { }

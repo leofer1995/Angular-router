@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { TimeInterceptor } from './interceptors/time.interceptor';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { SharedModule } from './shared/shared.module';
-import { QuicklinkModule } from 'ngx-quicklink';
 
 
 @NgModule({
@@ -23,7 +22,6 @@ import { QuicklinkModule } from 'ngx-quicklink';
     HttpClientModule,
     FormsModule,
     SharedModule,
-    QuicklinkModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TimeInterceptor, multi: true },

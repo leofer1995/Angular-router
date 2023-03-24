@@ -24,7 +24,7 @@ export class ProductsService {
       params = params.set('limit', limit);
       params = params.set('offset', offset);
     }
-    return this.http.get<Product[]>(`${this.apiUrl}/products`, { params, context: checkTime() })
+    return this.http.get<Product[]>(`${this.apiUrl}/products`, { params, context: checkTime() })// le agrega contexto para que ejecute el interceoptor
     .pipe(
       retry(3),
       map(products => products.map(item => {
